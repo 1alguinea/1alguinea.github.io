@@ -1,0 +1,55 @@
+:root {
+  --bg: #f6f2ea;
+  --text: #2a2622;
+  --muted: #6e655b;
+  --accent: #8a3b2e;
+  --line: #d9d0c2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1a17;
+    --text: #e9e3d8;
+    --muted: #a59b8e;
+    --accent: #d98c74;
+    --line: #3a352f;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.wrap { max-width: 42rem; margin: 0 auto; padding: 0 1rem; }
+header.top {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.25rem 0; border-bottom: 1px solid var(--line);
+}
+.name { font-size: 1.4rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text); text-decoration: none; }
+.lang a { color: var(--muted); text-decoration: none; margin-left: .75rem; font-size: 1rem; }
+.lang a[aria-current="true"] { color: var(--accent); }
+section { padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+section:last-of-type { border-bottom: 0; }
+h1, h2 { font-weight: 500; line-height: 1.2; }
+h1 { font-size: 2.4rem; margin: 0 0 .25rem; }
+h2 { font-size: 1.6rem; margin: 0 0 1rem; }
+.byline { color: var(--muted); margin: 0 0 1.5rem; }
+.book { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 640px) { .book { grid-template-columns: 14rem 1fr; align-items: start; } }
+img { max-width: 100%; height: auto; display: block; }
+.cover { box-shadow: 0 6px 24px rgba(0,0,0,.18); }
+blockquote {
+  margin: 1.5rem 0; padding-left: 1.25rem; border-left: 3px solid var(--accent);
+  font-style: italic; color: var(--text);
+}
+.button {
+  display: inline-block; padding: .55rem 1.2rem; border: 1px solid var(--accent);
+  color: var(--accent); text-decoration: none; border-radius: 2px;
+}
+.note { color: var(--muted); font-size: 1rem; }
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+footer { padding: 2rem 0; color: var(--muted); font-size: .95rem; border-top: 1px solid var(--line); }
