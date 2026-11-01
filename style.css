@@ -53,3 +53,6 @@ blockquote {
 .note { color: var(--muted); font-size: 1rem; }
 .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
 footer { padding: 2rem 0; color: var(--muted); font-size: .95rem; border-top: 1px solid var(--line); }
+.author-photo { width: 11rem; float: right; margin: 0 0 1rem 1.5rem; border-radius: 2px; box-shadow: 0 4px 16px rgba(0,0,0,.15); }
+@media (max-width: 480px) { .author-photo { float: none; width: 60%; margin: 0 auto 1.5rem; } }
+#autor::after, #author::after { content: ""; display: block; clear: both; }
